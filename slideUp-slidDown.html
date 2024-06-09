@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-left: 46%;
+        margin-top: 5px;
+        width: 100px;
+        cursor: pointer;
+        background-color: rgb(169, 153, 153);
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+      }
+      p {
+        text-align: center;
+      }
+      img {
+        margin-left: 40%;
+        padding: 12px;
+        height: 200px;
+        width: 300px;
+        background-color: aquamarine;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#show").click(function () {
+          $("#box").slideUp(1000);
+        });
+        $("#hide").click(function () {
+          $("#box").slideDown(1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Click on SlideUp and SlideDown</p>
+    <img src="img/photo.jpg" id="box" />
+    <button id="show">SlideUp</button>
+    <button id="hide">SlideDown</button>
+  </body>
+</html>

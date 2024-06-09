@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-container {
+            margin: 10px;
+            cursor: pointer;
+            background-color: pink;
+
+        }
+
+        .toggle-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="img/apple.jpg" id="image1" class="toggle-image">
+    </div>
+
+    <div class="image-container">
+        <img src="img/banana.jpg" id="image2" class="toggle-image">
+    </div>
+
+    <div class="image-container">
+        <img src="img/broccoli.jpg" id="imaga3" class="toggle-image">
+    </div>
+
+    <div class="image-container">
+        <img src="img/tomato.jpg" id="image4" class="toggle-image">
+    </div>
+
+</body>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+    
+    $("#image1").click(function () {
+        $(this).hide();
+       
+    });
+
+    let message="Hello 'Rahul' how are you?";
+    document.write(message+"<br>");
+    message+" did you had breakfast?";
+    document.write(message+"<br>");
+document.write(message+" did you had your breakfast?<br>");
+document.write(message);
+
+//string
+let  message1="Hello 'Rahul' how are you?";
+    document.write(message+"<br>");
+message= message+" did you had breakfast?";
+    document.write(message+"<br>");
+
+message="bye";
+document.write(message);
+
+//     $(document).ready(function() {
+//   $('.toggle-image').click(function() {
+//     $(this).toggleClass('hidden');
+//   });
+</script>
+
+</html>

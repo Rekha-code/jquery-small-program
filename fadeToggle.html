@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin-left: 46%;
+        margin-top: 5px;
+        width: 125px;
+        cursor: pointer;
+      }
+      p {
+        text-align: center;
+      }
+      #box {
+        margin: 0 auto;
+        padding: 12px;
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#box").fadeToggle(1000);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Click on Toggle box</p>
+    <div id="box">This is Box</div>
+    <button id="button">Toggle Box</button>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Tourist Destinations</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      input {
+        padding: 8px;
+        margin-right: 8px;
+      }
+
+      button {
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Favorite Tourist Destinations</h1>
+    <div>
+      <input
+        type="text"
+        id="destinationInput"
+        placeholder="Enter destination"
+      />
+      <button onclick="addDestination()">Add Destination</button>
+    </div>
+    <ul id="destinationList"></ul>
+
+    <script>
+      // Array to store destinations
+      const destinations = [];
+
+      function addDestination() {
+        const destinationInput = document.getElementById("destinationInput");
+        const destination = destinationInput.value.trim();
+
+        if (destination !== "") {
+          destinations.push(destination);
+          updateDestinationList();
+          destinationInput.value = "";
+        }
+      }
+
+      function updateDestinationList() {
+        const destinationList = document.getElementById("destinationList");
+        destinationList.innerHTML = "";
+
+        destinations.forEach((destination) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = destination;
+          destinationList.appendChild(listItem);
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+      input {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+</style>
+</head>
+<body>
+  <!-- <div>I am div</div>
+    <span>i m s;an</span>
+    <h1>i m headimng</h1>
+    <p>I m paragraph</p>
+    <input type="text">
+    <img src="img/apple.jpg" alt="apple" width="100px"height="100px"> -->
+    <div>
+      <input type="text" placeholder="Enter your name">
+    </div>
+    <br>
+    <div>
+      <input type="password" placeholder="Enter Password">
+    </div>
+    <br>
+    <div>
+      <input type="email" placeholder="Enter your email">
+    </div>
+
+
+</body>
+<script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // $("p").css("background-color","pink");
+        // $("span").css("background-color","blue");
+        // $("div").css("background-color","yellow");
+        // $("h1").css("background-color","green");
+        $('input[type="text"]').css('border-color', 'blue');
+        $('input[type="password"]').css('background-color', 'pink');
+      $('input[type="email"]').css('color', 'green');
+        // $("img[alt]").css("width","100px");
+      });
+  </script>
+</html>

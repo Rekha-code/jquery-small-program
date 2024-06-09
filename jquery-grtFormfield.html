@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <div>
+      <input type="text" id="name" value="Rekha" placeholder="enter name">
+    </div>
+    <div>
+      <input type="text" id="class" value="Class 12th" placeholder="enter class">
+    </div>
+    <button id="b1">Get Name</button>
+    <button id="b2">Get Class</button>
+</body>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#b1").click(function(){
+      alert($("#name").val());
+    });
+    $("#b2").click(function(){
+      alert($("#class").val());
+    });
+  });
+</script>
+</html>

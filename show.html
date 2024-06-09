@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("div").click(function () {
+          $(this).hide(2000);
+        });
+        $("button").click(function () {
+          $(this).show(1000);
+        });
+      });
+    </script>
+
+    <style>
+      div {
+        border: 2px solid black;
+        width: 100px;
+        height: 50px;
+        margin: 20px;
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Click on any box to see the result:</h3>
+    <br />
+    <div>DIV1</div>
+    <div>DIV2</div>
+    <div>DIV3</div>
+    <button>Show me</button>
+  </body>
+</html>

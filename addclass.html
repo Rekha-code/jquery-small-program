@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .big
+    {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .small{
+      font-weight: italic;
+      font-size: 0.5rem;
+      color: blue;
+    }
+    .b1{
+      color: red;
+      font-size: 2rem;
+    }
+    .b2{
+      color: pink;
+      font-size: 1rem;
+    }
+
+  </style>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // addclass method
+      $("button").click(function(){
+        $(".large").addClass("big");
+        $(".small").addClass("small");
+      });
+      // removeclass method
+      $("#remove").click(function(){
+        $(".large").removeClass("big");
+        $(".small").removeClass("small");
+      });
+      // toggleclass method
+      $("#toggle").click(function(){
+        $(".h1").toggleClass("b1");
+        $(".h2").toggleClass("b2");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Using assClass() method</h2>
+    <div class="large">Hello</div>
+    <div class="small">Bye</div>
+    <div class="h1">Hello How are you</div>
+    <div class="h2">welcome</div>
+  </div>
+  <button>Add Class</button>
+  <button id="remove">Remove Class</button>
+  <button id="toggle">Toggle Class</button>
+</body>
+</html>

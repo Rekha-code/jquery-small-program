@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("#listitem2")
+            .parentsUntil(".grandparent")
+            .css("border", "2px solid blue");
+        });
+      });
+    </script>
+    <style>
+      .greatgrandparent * {
+        display: block;
+        border: 2px solid green;
+        color: rgb(214, 10, 44);
+        margin: 2px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="greatgrandparent">
+      <div class="grandparent">
+        <ul class="parent">
+          <li id="listitem1">React</li>
+          <li id="listitem2">Angular</li>
+        </ul>
+      </div>
+    </div>
+    <button>DOM traversing</button>
+  </body>
+</html>

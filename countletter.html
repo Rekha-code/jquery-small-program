@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea Example</title>
+  </head>
+  <body>
+    <textarea
+      id="sourceTextarea"
+      oninput="updateDestination()"
+      rows="4"
+      cols="50"
+    >
+Type your text here...</textarea
+    >
+    <br />
+    <p>Letter count: <span id="letterCount">0</span></p>
+    <textarea
+      id="destinationTextarea"
+      rows="4"
+      cols="50"
+      placeholder="Copied text will appear here..."
+    ></textarea>
+
+    <script>
+      function updateDestination() {
+        // Get the value from the source textarea
+        var sourceText = document.getElementById("sourceTextarea").value;
+
+        // Count the letters
+        var letterCount = sourceText.replace(/[^a-zA-Z]/g, "").length;
+
+        // Display the letter count
+        document.getElementById("letterCount").textContent = letterCount;
+
+        // Set the value in the destination textarea
+        document.getElementById("destinationTextarea").value = sourceText;
+      }
+    </script>
+  </body>
+</html>

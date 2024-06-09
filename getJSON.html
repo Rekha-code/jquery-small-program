@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#driver").click(function (event) {
+          $.getJSON("student.json", function (jd) {
+            $("#stage").html("<p>Name:" + jd.name + "</p>");
+            $("#stage").append("<p> Age:" + jd.age + "</p");
+            $("#stage").append("<p> Sex:" + jd.sex + "</p");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Json File</p>
+    <div id="stage" style="background-color: pink">STAGE</div>
+    <input type="button" id="driver" value="Load Data" />
+  </body>
+</html>

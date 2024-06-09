@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show/Hide Image Toggle</title>
+    <style>
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-left: 120px;
+      }
+      button {
+        padding: 10px;
+        margin: 10px;
+        background-color: skyblue;
+        border-radius: 6px;
+        /* color: white; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="myImage" src="img/apple.jpg" alt="Apple" />
+      <button id="hideButton">Hide Image</button>
+      <button id="showButton">Show Image</button>
+      <button id="toggleButton">Toggle Image</button>
+
+      <button id="fadeoutButton">FadeOut Image</button>
+      <button id="fadeinButton">FadeIn Image</button>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#toggleButton").click(function () {
+          $("#myImage").toggle(1000);
+        });
+        $("#showButton").click(function () {
+          $("#myImage").show(1000);
+        });
+        $("#hideButton").click(function () {
+          $("#myImage").hide(2000);
+        });
+        $("#fadeinButton").click(function () {
+          $("#myImage").fadeIn(1000);
+        });
+        $("#fadeoutButton").click(function () {
+          $("#myImage").fadeOut(1000);
+        });
+      });
+    </script>
+  </body>
+</html>

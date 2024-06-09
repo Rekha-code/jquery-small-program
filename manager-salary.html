@@ -1,0 +1,74 @@
+<!-- create a program using in javascript which captures the requirement as mentioned below
+1)Returns the salary based on number of experience and job-
+experience 10 years job "manager" - 500000
+experience between 5 yrs < 10 yrs "manager" - 400000
+experience between 3 yrs < 5 yrs - "manager" - 300000
+for rest all sal - 200000
+2) create another function which calculates tax based  on salary of step1 tax rates-
+401000 - 500000 - 20%
+301000 - 399000 - 15%
+for rest - 10%
+display salary job and total tax to be paid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calaculateSalary(experience, job){
+            let salary = 0;
+
+            if(experience >= 10 && job === "manager")
+            {
+                salary = 500000;
+            }else if(experience >= 5 && job === "manager")
+            {
+                salary = 400000;
+            }
+            else if(experience >= 3 && job === "manager")
+            {
+                salary = 30000;
+            }else{
+                salary = 20000;
+            }
+            return salary;
+        }
+
+        function calculateTax(salary){
+            let taxRate = 0;
+
+            if(salary >= 401000 && salary <=500000)
+            {
+                taxRate = 0.2;
+            }
+            else if(salary >= 301000 && salary <= 399000)
+            {
+                taxRate = 0.15;
+            }
+            else{
+                taxRate = 0.1;
+            }
+            return salary * taxRate;
+        }
+
+        function dispalySalaryAndTax(experience,job){
+            const salary = calaculateSalary(experience,job);
+            const tax = calculateTax(salary);
+            const totalSalaryAfterTax = salary-tax;
+
+            document.write(`Job: ${job}`);
+            document.write("<br>");
+            document.write(`Experience: ${experience} years`);
+            document.write("<br>");
+            document.write(`Salary: ${salary}`);
+            document.write("<br>");
+            document.write(`Tax to be paid:${tax}`);
+        }
+        dispalySalaryAndTax(6,"manager");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

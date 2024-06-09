@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea Example</title>
+  </head>
+  <body>
+    <input type="text" id="sourceTextarea" oninput="copyText()" />
+    <br /><br />
+    <textarea id="destinationTextarea" rows="4" cols="50"></textarea>
+    <p>Letter count: <span id="letterCount">0</span></p>
+    <script>
+      function copyText() {
+        // Get the value from the source textarea
+        var sourceText = document.getElementById("sourceTextarea").value;
+
+        // Set the value in the destination textarea
+        document.getElementById("destinationTextarea").value = sourceText;
+
+        var letterCount = sourceText.length;
+        document.getElementById("letterCount").textContent = letterCount;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      .container {
+        margin: auto 0;
+        background-color: rgb(60, 194, 194);
+        width: 20%;
+        height: auto;
+        padding: 20px;
+        margin-left: 40%;
+        border-radius: 5px;
+      }
+      .btn {
+        margin-left: 15%;
+        padding: 10px;
+        width: 70px;
+        border-radius: 5px;
+      }
+      input {
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#loginBtn").click(function () {
+          var username = $("#username").val();
+          var password = $("#password").val();
+          if (username === "rekha" && password === "webdev") {
+            $("#username,#password").css("border-color", "green");
+            alert("Login successful!.");
+            // $("#stage").load("profile.html");
+            // Redirect to the next page
+            // window.location.href = "profile.html";
+            window.location.href =
+              "profile.html?username=" + encodeURIComponent(username);
+          } else {
+            $("#username,#password").css("border-color", "red");
+            alert("Login Failed,Please check your credentials");
+          }
+        });
+        $("#resetBtn").click(function () {
+          // Reset the input fields and border colors
+          $("#username, #password").val("");
+          $("#username, #password").css("border-color", "");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter Your Name" />
+      </p>
+      <p>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Your password"
+        />
+      </p>
+
+      <input type="button" id="loginBtn" class="btn" value="Login" />
+
+      <input type="reset" id="resetBtn" class="btn" value="Reset" />
+    </div>
+    <div id="stage"></div>
+  </body>
+</html>
+
+<!-- create a login page username and password and login button username and password is set username is rekha and password is webdev creadentials is success redirect the another file in welcome yourname and crediendials is failed show error msg using jquery and redirect page is using load method  -->

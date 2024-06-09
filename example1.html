@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script> -->
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque laborum error eos culpa, officiis autem omnis necessitatibus iure officia, sequi facilis exercitationem provident maxime, amet iusto ducimus molestias? Rerum, dicta!</p>
+    <p>para</p>
+</body>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+       $("#para").click(function()
+       {
+        console.log('you clicked on paragraph');
+        $(this).hide();
+       });
+    </script>
+
+</html>

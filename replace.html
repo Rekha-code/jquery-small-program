@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#b1").click(function () {
+          $("p").replaceWith(
+            "<h1> This is heading1 in place of paragraph</h1>"
+          );
+        });
+        $("#b2").click(function () {
+          $("h1").replaceWith(
+            "<h3> This is heading3 in place of heading1</h3>"
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>using replaceWith() function</p>
+    <button id="b1">Replace Paragraph</button>
+    <button id="b2">Replace heading</button>
+  </body>
+</html>
